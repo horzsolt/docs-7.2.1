@@ -9,13 +9,13 @@ The following instructions assume that your docker instance is named
 commands.
 
 #### Step 1: Pull new image [](update-docker-1)
-Install the current TimescaleDB 2.0 image:
+Install the current TimescaleDB image:
 
 ```bash
-docker pull timescale/timescaledb:2.0.0-pg12
+docker pull timescale/timescaledb-ha:pg14-latest
 ```
 <highlight type="tip">
-If you are using PostgreSQL 11 images, use the tag `2.0.0-pg11`.
+If you are using another PostgreSQL version, look for the relevant tag on https://hub.docker.com/r/timescale/timescaledb-ha/tags.
 </highlight>
 
 #### Step 2: Determine mount point used by old container [](update-docker-2)
@@ -58,12 +58,12 @@ the existing mount point. This again differs by mount type.
 
 1. For volume mounts you can use:
 ```bash
-docker run -v 069ba64815f0c26783b81a5f0ca813227fde8491f429cf77ed9a5ae3536c0b2c:/var/lib/postgresql/data -d --name timescaledb -p 5432:5432 timescale/timescaledb
+docker run -v 069ba64815f0c26783b81a5f0ca813227fde8491f429cf77ed9a5ae3536c0b2c:/var/lib/postgresql/data -d --name timescaledb -p 5432:5432 timescale/timescaledb-ha
 ```
 
 2. If using bind-mounts, you need to run:
 ```bash
-docker run -v /path/to/data:/var/lib/postgresql/data -d --name timescaledb -p 5432:5432 timescale/timescaledb
+docker run -v /path/to/data:/var/lib/postgresql/data -d --name timescaledb -p 5432:5432 timescale/timescaledb-ha
 ```
 
 
@@ -76,6 +76,9 @@ docker exec -it timescaledb psql -U postgres -X
 
 # within the PostgreSQL instance
 ALTER EXTENSION timescaledb UPDATE;
+# update or install the timescaledb-toolkit extension 
+CREATE EXTENSION IF NOT EXISTS timescaledb-toolkit;
+ALTER EXTENSION timescaledb-toolkit UPDATE;
 ```
 
 You can then run the `\dx` command to make sure you have the
