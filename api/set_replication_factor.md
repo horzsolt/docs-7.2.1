@@ -56,4 +56,4 @@ DETAIL:  The hypertable has 2 data nodes attached, while the replication factor 
 HINT:  Decrease the replication factor or attach more data nodes to the hypertable.
 ```
 
-[attach_data_node]: /api/:currentVersion:/distributed-hypertables/attach-data_node/
+[attach_data_node]: /api/:currentVersion:/distributed-hypertables/attach_data_node/

@@ -52,5 +52,5 @@ MATERIALIZED VIEW` are `materialized_only` and `compress`. The other options
 `continuous` and `create_group_indexes` can only be set when creating
 the continuous aggregate.
 
-[create_materialized-view]: /api/:currentVersion:/continuous-aggregates/create_materialized_view/#parameters
+[create_materialized_view]: /api/:currentVersion:/continuous-aggregates/create_materialized_view/#parameters
 [postgres-alterview]: https://www.postgresql.org/docs/current/sql-alterview.html

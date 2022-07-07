@@ -102,4 +102,4 @@ ORDER BY day;
 ```
 
 [hyperfunctions-gapfilling]: /timescaledb/:currentVersion:/how-to-guides/hyperfunctions/gapfilling-interpolation/
-[time_bucket_gapfill]: /api/:currentVersion:/hyperfunctions/time_bucket_gapfill/
+[time_bucket_gapfill]: /api/:currentVersion:/hyperfunctions/gapfilling-interpolation/time_bucket_gapfill/
