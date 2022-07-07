@@ -64,6 +64,6 @@ Altering data of compressed chunks still has some limitations:
 
 [add_compression_policy]: /api/:currentVersion:/compression/add_compression_policy/
 [blog-compression]: https://blog.timescale.com/blog/building-columnar-compression-in-a-row-oriented-database/
-[compress_chunk]: /api/:currentVersion:/compression/compress-chunk/
+[compress_chunk]: /api/:currentVersion:/compression/compress_chunk/
 [configure-compression]: /api/:currentVersion:/compression/alter_table_compression/
 [using-compression]: /timescaledb/:currentVersion:/how-to-guides/compression/

@@ -53,4 +53,4 @@ SELECT add_retention_policy('conditions', BIGINT '600000');
 ```
 
 [drop_chunks]: /api/:currentVersion:/hypertable/drop_chunks/
-[set_integer_now_func]: /api/:currentVersion/hypertable/set_integer_now_func/
+[set_integer_now_func]: /api/:currentVersion:/hypertable/set_integer_now_func/

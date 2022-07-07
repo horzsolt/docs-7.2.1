@@ -86,4 +86,4 @@ chunk_tablespace       | tablespace1
 data_nodes             |
 ```
 
-[dimensions]: /api/:currentVersion/informational-views/dimensions/
+[dimensions]: /api/:currentVersion:/informational-views/dimensions/
